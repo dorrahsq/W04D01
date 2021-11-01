@@ -24,7 +24,7 @@ class Todo extends React.Component {
   };
 
   deletitem=(Id)=>{
-    {console.log(Id)}
+    // {console.log(Id)}
     this.setState({ todoarray:  this.state.todoarray.filter((item) =>  item.Id !== Id) });
   }
 
@@ -36,8 +36,9 @@ class Todo extends React.Component {
         <form onSubmit={this.createNew}>
           <ul>
             {console.log(this.state.todoarray)}
+           
             {this.state.todoarray.map((item, i) => (
-                <TodoItem  todos={item}  key={i} deletitem={this.deletitem} />
+                <TodoItem  todos={item}  key={i} deletitem={this.deletitem}  /> //This  {} is passed as a prop
               ) 
             )}
           </ul>

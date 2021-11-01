@@ -9,7 +9,7 @@ class TodoItem extends React.Component {
     return (
       <>
         <li>
-          {console.log(this.props.todos)};
+         
           {this.props.todos.name}
           <span onClick={() => this.props.deletitem(this.props.todos.Id)}>
             X
